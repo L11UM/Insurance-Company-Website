@@ -1,58 +1,59 @@
-# Personal Website
+# 👨‍💻 Personal DevFolio (3.0)
 
-See: [mldangelo.com](https://mldangelo.com).
+### _Personal Portfolio built using ReactJs, Sanity CMS and Animation libraries, hope you like it. Tweak it and use it !!_
 
-My personal website. An [MIT](https://github.com/mldangelo/personal-site/blob/main/LICENSE) licensed, simple, easily modifiable, statically-exportable [React](https://reactjs.org/), [Jamstack](https://jamstack.org/) application that deploys automatically for free using [github pages](https://pages.github.com/). Built using modern javascript, based on [create-react-app](https://github.com/facebook/create-react-app) with [React-Router](https://reactrouter.com/), SCSS, [github actions](https://github.com/features/actions), and many other useful technologies.
+### Demo Video (3.0) :link: https://youtu.be/GrA2i1GNmbg
 
-## Adapting this Project
+### Link :link: https://developerjunaid.com/
 
-Building your own personal website from this project can take as little as 30 minutes. Follow the setup instructions below and review **detailed notes and a checklist on adapting this project [here](./docs/adapting-guide.md)**. Please feel free to reach out to me by filing an issue or emailing me at [help@mldangelo.com](mailto:help@mldangelo.com) for help configuring your project.
+## Images
 
-## Contributing
+<img src='./project_images/home.png' />
+<img src='./project_images/navbar.png' />
+<img src='./project_images/services.png' />
+<img src='./project_images/portfolio.png' />
+<img src='./project_images/testimonials.png' />
+<img src='./project_images/contact.png' />
 
-Contributions are actively encouraged. Please review the [design goals](./docs/design-goals.md), [roadmap](./docs/roadmap.md), and [contributing guidelines](./docs/contributing.md). If you find a bug, please email me, submit a pull request (I'll buy you a coffee as a thank you), or submit an issue.
+## Mobile Responsive
 
-## Dependencies
+<img src='./project_images/mobile.png' />
 
-Tested with: [node](https://nodejs.org/) >= v12 and optional [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) for managing node versions.
+## Run Locally
 
-## Set up
+- Run this command `git clone https://github.com/developer-junaid/DeveloperFolio.git`
+- You are now in the dev environment and you can play around
 
-To download the repository and install dependencies, run the following commands:
+### To Run Sanity CMS Locally
 
-```bash
-git clone git://github.com/mldangelo/personal-site.git # replace [mldangelo] with your github username if you fork first.
-cd personal-site
-nvm install # this is optional - make sure you're running >= node 12 with `node --version`
-npm install
-```
+- Sign Up to [Sanity](https://www.sanity.io/)
+- Navigate to portfoliosanitydata using terminal Run: `cd portfoliosanitydata`
+- Install dependencies Run: `npm install`
+- Install Sanity Cli Run: `npm install -g @sanity/cli`
+- Login to sanity using cli run: `sanity login` (Select your preferred method)
+- Initialize sanity project run: `sanity init`
+- We are going to see a list of questions for us to answer in the next steps. Let's walk through those!
+- - Create new project — Hit Enter.
+- - Your project name: — We can name it whatever we would like. Let's “Portfolio Sanity Data" for this project.
+- - Use the default dataset configuration? — The default dataset configuration has a public dataset named “production”, let's stick with that. So type in “Y” and hit Enter.
+- - Project output path: — This will show us the path where our sanity project will live. The path should show the path that leads to this: /developerFolio/portfoliosanitydata. Hit Enter.
+- - Select project template: — Here we are going to choose “Movies (schema + Sample data)”. Using the arrow keys, navigate to that so it’s showing blue. Hit Enter once there. Success!
+- - Now Replace `schemas` folder with the folder from my repository
+- Run Sanity Studio in the browser, first navigate to sanity project : `cd portfoliosanitydata`
+- Run: `sanity start`
+- Visit localhost:3333 to view live studio and add your data
 
-## Running
+### Connecting React App with Sanity Locally
 
-Run the following command to build the react application and serve it with fast refresh:
+- Get projectId and dataset from portfoliosanitydata/sanity.json and paste in the value of those keys in the src/client.js respected fields
 
-```bash
-npm start
-```
+## Tech Stack
 
-Your web browser should automatically open to `<ip>:<port>:<path>` default: [http://localhost:3000/](http://localhost:3000/).
-
-## Deploying
-
-### Deploying to Github Pages
-
-1. Modify the environmental variables and git remote url in [`.github/workflows/github-pages.yml`](.github/workflows/github-pages.yml).
-2. Modify `homepage` in `package.json` to point to where you plan to host your site. If you do not plan on using a custom domain name, it should look like `https://[your-gh-username].github.io/[repository-name - default:personal-site]/`
-3. If you plan on using a custom domain, modify `public/CNAME`. If you don't, delete `public/CNAME`.
-
-Make a commit to `main` and push your changes. That's it.
-
-### Static Export
-
-To statically export the site without deploying to github pages, delete or disable `.github/workflows/github-pages.yml` and run `npm run predeploy`. This generates a static export of the website as `personal-site/build/`. Copy this and self-host or deploy to a CDN.
-
-## Acknowledgements
-
-* Template based on [Future Imperfect](https://html5up.net/future-imperfect) by [@ajlkn](https://github.com/ajlkn) for [HTML5 UP](html5up.net).
-* Special thanks to [@typpo](https://github.com/typpo) for tirelessly answering all of my node.js and react questions.
-* [@notrueblood](https://github.com/notrueblood)[<sup>[1]</sup>](https://github.com/mldangelo/personal-site/pull/218) and [@sjhsieh](https://github.com/sjhsieh)[<sup>[2]</sup>](https://github.com/mldangelo/personal-site/issues/168) for keeping my ego in check.
+- HTML5
+- CSS3
+- Javascript ES6
+- React js
+- Animation Libraries (Framer motion, react-scroll, aos)
+- Firebase
+- Github Actions
+- Sanity.io (CMS)
